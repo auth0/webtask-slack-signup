@@ -1,4 +1,4 @@
-webtask-slack-signup: Create Slack signup page using Auth0 webtasks
+Create Slack signup page using Auth0 webtasks
 ======
 
 With [Auth0 Webtasks](https://webtask.io) you can quickly create a signup page for your Slack team without worrying about hosting, backends, and devops. 
