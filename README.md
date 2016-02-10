@@ -15,4 +15,6 @@ wt create https://raw.githubusercontent.com/auth0/webtask-slack-signup/master/sl
     --secret SLACK_TOKEN={your_slack_admin_token}
 ```
 
+Optionally, you can also provide `--secret LOGO_URL={url_to_your_logo}` which will display your custom logo on the signup page. It shoudl be square and not less than 100x100px. 
+
 Use the resulting URL as your Slack signup page. Enjoy!
