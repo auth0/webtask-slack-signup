@@ -97,7 +97,7 @@ function slack_invite() {/*
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create your own Slack invite</p>
+                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
             </div>
         </div>
     </div>
@@ -121,7 +121,7 @@ function invite_sent() {/*
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create your own Slack invite</p>
+                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@ function oops() {/*
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create your own Slack invite</p>
+                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
             </div>
         </div>
     </div>
