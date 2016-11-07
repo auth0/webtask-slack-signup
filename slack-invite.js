@@ -96,7 +96,7 @@ function slack_invite() {/*
         }
 
         .header-image .image{
-            background: transparent url("<%- ctx.secrets.LOGO_URL || logo_url %>") center center no-repeat;
+            background: transparent url("<%- ctx.secrets.BG_URL || ctx.secrets.LOGO_URL || logo_url %>") center center no-repeat;
             background-size: cover;
             -webkit-filter: blur(12px);
             -moz-filter: blur(12px);
@@ -213,7 +213,7 @@ function slack_invite() {/*
             <p>Enter your e-mail below to receive an invitation:</p>
             <form method="POST">
               <div class="form-group">
-                <input type="email" class="form-control input-email" name="email" placeholder="foo@example.com">
+                <input type="email" class="form-control input-email" name="email" placeholder="foo@example.com" required>
               </div>
               <button type="submit" class="button-invitation">Get invitation</button>
             </form>
