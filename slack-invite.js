@@ -209,7 +209,7 @@ function slack_invite() {/*
     </header>
     <div class="container">
         <div class=" col-md-6 col-md-offset-3 text-center">
-            <h2>Join <span><%= ctx.secrets.SLACK_ORG <%></span></%> on Slack</h2>
+            <h2>Join <span><%= ctx.secrets.SLACK_ORG %></span> on Slack</h2>
             <p>Enter your e-mail below to receive an invitation:</p>
             <form method="POST">
               <div class="form-group">
