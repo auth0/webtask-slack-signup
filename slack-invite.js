@@ -80,25 +80,151 @@ function slack_invite() {/*
 <head>
     <title><%= ctx.secrets.SLACK_ORG %> signup</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+
+        body {
+            font-family: "Avenir Next",Avenir,"Helvetica Neue",Hevetica,sans-serif;
+        }
+
+        .header-image {
+            position: relative;
+            height: 235px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 70px;
+        }
+
+        .header-image .image{
+            background: transparent url("<%- ctx.secrets.LOGO_URL || logo_url %>") center center no-repeat;
+            background-size: cover;
+            -webkit-filter: blur(12px);
+            -moz-filter: blur(12px);
+            -o-filter: blur(12px);
+            -ms-filter: blur(12px);
+            filter: blur(12px);
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            bottom: -20px;
+            left: -20px;
+            opacity: 0.9;
+        }
+
+        .user-logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 4px 0px #D0D2D3;
+            position: absolute;
+            top: 212px;
+            left: 49.5%;
+        }
+
+        .slack-logo {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            box-shadow: 0px 2px 4px 0px #D0D2D3;
+            position: absolute;
+            top: 180px;
+            right: 48.5%;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 15px 0 0; 
+        }
+
+        .input-email {
+            max-width: 325px;
+            margin: 40px auto;
+        }
+
+        .button-invitation {
+            background: #E76D5F;
+            border-radius: 25px;
+            font-size: 16px;
+            height: 50px;
+            border: none;
+            color: white;
+            padding: 0 30px;
+        }
+
+        .button-invitation:hover {
+            background: #DD6557;
+        }
+
+        .footer {
+            position: relative;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+
+        .separator-line {
+            height: 1px;
+            width: 100%;
+            border-top: 1px solid #E76D5F;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+
+
+        .footer-copy {
+            background: white;
+        }
+
+        .webtask-copy a {
+            color: #333;
+        }
+
+        .webtask-copy a:hover {
+            text-decoration: none
+        }
+
+        .create-copy {
+            font-size: 16px;
+        }
+        
+        .create-copy a {
+            color: #E76D5F;
+        }
+
+        .create-copy a:hover {
+            color: #DD6557;
+        }
+
+    
+    </style>
+
 </head>
-<body style="padding-top: 30px;">
+<body>
+    <header>
+        <div class="header-image">
+            <div class="image"></div>
+        </div>
+        <img src="https://cdn.auth0.com/website/webtask/assets/slack-webtask-logo.png" alt="Slack" class="slack-logo">
+        <img class="user-logo" src="<%- ctx.secrets.LOGO_URL || logo_url %>" width="100" heigth="100">
+    </header>
     <div class="container">
-        <div class="jumbotron col-md-6 col-md-offset-3 text-center">
-            <img src="<%- ctx.secrets.LOGO_URL || logo_url %>" width="100" heigth="100">
-            <h2>Join <strong><%= ctx.secrets.SLACK_ORG %></strong> on Slack</h2>
-            <p><small>Enter your e-mail below to receive an invitation:</small></p>
+        <div class=" col-md-6 col-md-offset-3 text-center">
+            <h2>Join <span><%= ctx.secrets.SLACK_ORG <%></span></%> on Slack</h2>
+            <p>Enter your e-mail below to receive an invitation:</p>
             <form method="POST">
               <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="foo@example.com">
+                <input type="email" class="form-control input-email" name="email" placeholder="foo@example.com">
               </div>
-              <button type="submit" class="btn btn-primary btn-lg">Get invitation</button>
+              <button type="submit" class="button-invitation">Get invitation</button>
             </form>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <p>Powered by <a href="https://webtask.io">Auth0 Webtasks</a>&nbsp;|&nbsp;Create <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">your own Slack invite</a></p>
-            </div>
+        
+    </div>
+    <div class="footer">
+        <div class="separator-line"></div>
+        <div class="col-md-4 col-md-offset-4 text-center footer-copy">
+            <p class="webtask-copy">Powered by &nbsp;<a href="https://webtask.io"><img src="https://webtask.io/images/symbol.svg" alt="Webtasks" width="30px" height="30px">&nbsp; Auth0 Webtasks</a></p>
+            <p class="create-copy">Create your own  <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">Slack invite</a></p>
         </div>
     </div>
 </body>
