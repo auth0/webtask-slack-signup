@@ -224,7 +224,7 @@ function slack_invite() {/*
         <div class="separator-line"></div>
         <div class="col-md-4 col-md-offset-4 text-center footer-copy">
             <p class="webtask-copy">Powered by &nbsp;<a href="https://webtask.io"><img src="https://webtask.io/images/symbol.svg" alt="Webtasks" width="30px" height="30px">&nbsp; Auth0 Webtasks</a></p>
-            <p class="create-copy">Create your own  <a href="https://tomasz.janczuk.org/2016/02/create-slack-signup-page-with-webtasks.html">Slack invite</a></p>
+            <p class="create-copy">Create your own  <a href="https://github.com/auth0/webtask-slack-signup">Slack invite</a></p>
         </div>
     </div>
 </body>
