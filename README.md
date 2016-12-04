@@ -1,6 +1,9 @@
 Create Slack signup page using Auth0 webtasks
 ======
 
+![image](https://cloud.githubusercontent.com/assets/3391028/20866792/4f930b42-ba14-11e6-94fc-18b1c7578137.png)
+
+
 With [Auth0 Webtasks](https://webtask.io) you can quickly create a signup page for your Slack team without worrying about hosting, backends, and devops. 
 
 Follow these 3 steps:
