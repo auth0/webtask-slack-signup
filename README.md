@@ -14,6 +14,7 @@ wt init
 wt create https://raw.githubusercontent.com/auth0/webtask-slack-signup/master/slack-invite.js \
     --name {your_slack_team}-signup \
     --capture \
+    --parse-body \
     --secret SLACK_ORG={your_slack_team} \
     --secret SLACK_TOKEN={your_slack_admin_token}
 ```
