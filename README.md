@@ -13,10 +13,12 @@ npm install -g wt-cli
 wt init
 wt create https://raw.githubusercontent.com/auth0/webtask-slack-signup/master/slack-invite.js \
     --name {your_slack_team}-signup \
-    --capture \
-    --parse-body \
     --secret SLACK_ORG={your_slack_team} \
-    --secret SLACK_TOKEN={your_slack_admin_token}
+    --secret SLACK_TOKEN={your_slack_admin_token} \
+    --dependency ejs@2.6.1 \
+    --dependency superagent@3.8.3 \
+    --dependency body-parser@1.18.3 \
+    --middleware https://raw.githubusercontent.com/auth0/webtask-slack-signup/master/middleware.js
 ```
 
 The `{your_slack_admin_token}` can be obtained from Slack [here](https://api.slack.com/docs/oauth-test-tokens). 
