@@ -6,7 +6,6 @@ Function.prototype.stringify = function () {
 }
 
 module.exports = function (ctx, req, res) {
-
     // Validate webtask parameters
 
     var required_params = ['SLACK_ORG', 'SLACK_TOKEN'];
@@ -25,7 +24,7 @@ module.exports = function (ctx, req, res) {
     if (req.method === 'GET')
         return handle_get_invite();
     else if (req.method === 'POST') {
-        if (typeof ctx.body.email !== 'string' || !ctx.body.email.trim().match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i))
+        if (typeof req.body.email !== 'string' || !req.body.email.trim().match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i))
             return handle_error({ code: 400, message: 'Missing or invalid e-mail address.'});
         else
             return handle_send_invite();
@@ -48,7 +47,7 @@ module.exports = function (ctx, req, res) {
             .post('https://' + ctx.secrets.SLACK_ORG + '.slack.com/api/users.admin.invite')
             .type('form')
             .send({
-                email: ctx.body.email.trim(),
+                email: req.body.email.trim(),
                 token: ctx.secrets.SLACK_TOKEN,
                 set_active: true
             })
